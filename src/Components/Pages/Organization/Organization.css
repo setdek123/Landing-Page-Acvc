@@ -1,0 +1,15 @@
+.whats-main {
+    position: fixed; /* Mantém fixo na tela */
+    left: 95em; /* Distância da borda esquerda */
+    bottom: 20px; /* Ajuste a altura conforme necessário */
+    z-index: 99; /* Garante que fique sobre outros elementos */
+}
+
+.whats-main img{
+    width: 110px;
+    cursor: pointer;
+}
+
+.whats-main img:hover{
+    transform: scale(1.2);
+}

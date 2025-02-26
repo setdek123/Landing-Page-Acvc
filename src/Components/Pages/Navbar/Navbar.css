@@ -1,0 +1,127 @@
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    background: transparent;
+    z-index: 99;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.info-ender {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: 500;
+    background-color: rgba(72, 129, 75, 0.274);
+    padding: 0.1em;
+    width: 100vw;
+}
+
+.info-ender p {
+    color: #fff;
+    animation: anim-info 20s linear infinite;
+}
+
+@keyframes anim-info {
+    0% {
+        transform: translateX(99%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.logo img {
+    width: 5em;
+    margin-top: -5px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 990px;
+}
+
+.l-menu {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.l-menu:hover {
+    border: 1px solid rgba(240, 240, 240, 0.274);
+    color: rgba(219, 219, 219, 0.274);
+    transition: 0.5s linear;
+}
+
+.heart {
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.n-like {
+    display: flex;
+    position: relative;
+    left: -45px;
+    right: 0px;
+    top: -11px;
+    bottom: 0px;
+}
+
+.n-like span {
+    font-weight: 900;
+    font-size: 19px;
+}
+
+.link-insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -50px;
+}
+
+.link-insta img {
+    width: 40px;
+}
+
+@media (max-width: 30em) {
+    .nav-container{
+        display: flex;
+        background-color: violet;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .control{
+       
+        
+    }
+
+    .nav-container .logo{
+        display: flex;
+        margin-left: 20px;
+    }
+
+    .control .hamburger{
+        display: flex;
+        background-color: yellowgreen;
+    }
+
+    .control .hamburger div{
+        width: 30px;
+        height: 10px;
+        padding: 2px;
+        background-color: #fff;
+    }
+
+}

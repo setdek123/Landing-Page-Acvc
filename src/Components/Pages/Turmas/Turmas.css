@@ -1,0 +1,169 @@
+/* Contêiner principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 20px; /* Adiciona um pouco de padding para evitar que o conteúdo encoste nas bordas em telas pequenas */
+    box-sizing: border-box;
+}
+
+/* Título */
+.title h1 {
+    font-size: 5.5em;
+    margin-top: -350px;
+    filter: blur(1px);
+    text-align: center; /* Centraliza o título */
+}
+
+/* Cards - Container */
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 130px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-wrap: wrap; /* Permite que os cards se ajustem em múltiplas linhas se necessário */
+    justify-content: space-around; /* Distribui os cards de forma eficiente */
+    width: 100%;
+}
+
+/* Card individual (Mirim, Infantil, Adulto) */
+.mirim, .infantil, .adulto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px; /* Limita o tamanho máximo do card */
+    background-color: rgb(10, 10, 29);
+    border-radius: 20px;
+    box-shadow: 0px 10px 17px #000000;
+    margin-bottom: 20px; /* Adiciona um espaçamento entre os cards */
+    transition: transform 0.3s ease;
+}
+
+/* Imagem dos cards */
+.mirim img, .infantil img, .adulto img {
+    width: 100%;
+    height: 200px; /* Ajusta a altura fixa da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: opacity(75%);
+}
+
+.mirim img:hover, .infantil img:hover, .adulto img:hover {
+    transform: scale(1.05); /* Leve efeito de zoom */
+    filter: opacity(100%); /* Melhora a visibilidade da imagem */
+}
+
+/* Descrição do card */
+.descript {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 6px;
+    z-index: 99;
+    overflow: hidden;
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+}
+
+.descript span {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Título dentro do card */
+.title-card h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 4.5em; /* Ajusta o tamanho do título para telas menores */
+        margin-top: -200px; /* Ajusta a posição do título */
+    }
+
+    .cards {
+        flex-direction: column; /* Exibe os cards em uma coluna */
+        margin-top: 50px;
+    }
+
+    .title-card h2 {
+        font-size: 2.5em; /* Ajusta o tamanho do título dos cards */
+    }
+
+    .descript {
+        padding: 15px; /* Ajusta o padding nos cards */
+    }
+}
+
+/* Responsividade para telas pequenas (max-width: 768px) */
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 3.5em;
+        margin-top: -100px;
+    }
+
+    .cards {
+        flex-direction: column; /* Exibe os cards em uma coluna */
+        align-items: center;
+        gap: 20px; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .mirim img, .infantil img, .adulto img {
+        height: 150px; /* Ajusta a altura das imagens para telas menores */
+    }
+
+    .descript {
+        padding: 10px 15px; /* Ajusta o padding para telas menores */
+    }
+
+    .title-card h2 {
+        font-size: 2.2em; /* Ajusta o tamanho do título dos cards */
+    }
+
+    .descript span {
+        font-size: 1.2em; /* Ajusta o tamanho da descrição */
+    }
+}
+
+/* Responsividade para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 2.8em;
+        margin-top: -50px;
+    }
+
+    .cards {
+        gap: 15px; /* Reduz o espaçamento entre os cards */
+    }
+
+    .mirim img, .infantil img, .adulto img {
+        height: 120px; /* Ajusta a altura das imagens para telas menores */
+    }
+
+    .descript {
+        padding: 8px 12px; /* Ajusta o padding para telas pequenas */
+    }
+
+    .title-card h2 {
+        font-size: 1.8em; /* Ajusta o tamanho do título dos cards */
+    }
+
+    .descript span {
+        font-size: 1em; /* Ajusta o tamanho da descrição */
+    }
+}

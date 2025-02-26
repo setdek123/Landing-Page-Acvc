@@ -1,0 +1,123 @@
+/* Contêiner principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    border-top: 1px solid #353535;
+    overflow: hidden;
+}
+
+/* Imagem de fundo */
+.img-b {
+    position: relative;
+    width: 900px; /* Definindo uma largura fixa */
+    margin-top: 50px;
+    margin-left: -855px;
+}
+
+.img-b img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    display: block;
+}
+
+.img-b::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(22, 26, 53, 0.1), #131212);
+    pointer-events: none; /* Não interfere nos cliques */
+}
+
+/* Título geral */
+.title {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.mestre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    margin-top: -650px;
+}
+
+.mestre h1 {
+    margin-left: -100px;
+    margin-bottom: -250px;
+    font-size: 50px;
+    border-bottom: 1px solid #353535;
+    filter: blur(2px);
+}
+
+/* Estilo para os links no título */
+.title h2 {
+    padding: 0 20px;
+    font-size: 23px;
+    margin-top: 50px;
+    margin-left: 75px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.title h2:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade para telas pequenas (max-width: 30em) */
+@media (max-width: 30em) {
+    /* Ajustes para a fonte da página */
+    html {
+        font-size: 50%; /* Ajusta o tamanho da fonte para dispositivos pequenos */
+    }
+
+    /* Ajustes no contêiner */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Ajustes no título */
+    .title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mestre {
+        /* Ajusta as margens e posição do título */
+        margin-top: -400px;
+        text-align: center;
+    }
+
+    /* Ajuste para o título principal (h1) */
+    .mestre h1 {
+        font-size: 20px;
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-bottom: 0; /* Remove a margem inferior */
+        font-weight: bold; /* Torna o título mais legível */
+    }
+
+    /* Ajuste para os links do título (h2) */
+    .title h2 {
+        font-size: 16px; /* Ajuste para um tamanho menor */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 30px; /* Ajuste o espaço entre os elementos */
+        text-align: center; /* Alinha os textos */
+    }
+
+    /* Ajuste na imagem de fundo (img-b) */
+    .img-b {
+        width: 100%; /* Faz a imagem ocupar 100% da largura */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 0; /* Ajusta a margem superior */
+    }
+}
