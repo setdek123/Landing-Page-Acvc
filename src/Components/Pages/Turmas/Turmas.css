@@ -9,9 +9,12 @@
     box-sizing: border-box;
 }
 
-/* Título */
+.title{
+    margin-top: 150px;
+}
+
 .title h1 {
-    font-size: 5.5em;
+    font-size: 5em;
     margin-top: -350px;
     filter: blur(1px);
     text-align: center; /* Centraliza o título */
@@ -26,27 +29,26 @@
     margin-top: 130px;
     border-radius: 20px;
     overflow: hidden;
-    flex-wrap: wrap; /* Permite que os cards se ajustem em múltiplas linhas se necessário */
-    justify-content: space-around; /* Distribui os cards de forma eficiente */
+    flex-wrap: wrap; 
     width: 100%;
 }
 
-/* Card individual (Mirim, Infantil, Adulto) */
+
 .mirim, .infantil, .adulto {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 350px; /* Limita o tamanho máximo do card */
-    background-color: rgb(10, 10, 29);
+    max-width: 350px; 
+    background-color: rgb(32, 32, 71);
     border-radius: 20px;
     box-shadow: 0px 10px 17px #000000;
-    margin-bottom: 20px; /* Adiciona um espaçamento entre os cards */
+    margin-bottom: 20px; 
     transition: transform 0.3s ease;
 }
 
-/* Imagem dos cards */
+
 .mirim img, .infantil img, .adulto img {
     width: 100%;
     height: 200px; /* Ajusta a altura fixa da imagem */
@@ -59,9 +61,12 @@
 }
 
 .mirim img:hover, .infantil img:hover, .adulto img:hover {
-    transform: scale(1.05); /* Leve efeito de zoom */
-    filter: opacity(100%); /* Melhora a visibilidade da imagem */
+    transform: scale(1.05); 
+    filter: opacity(100%);
+    
 }
+
+
 
 /* Descrição do card */
 .descript {
@@ -72,13 +77,24 @@
     gap: 6px;
     z-index: 99;
     overflow: hidden;
-    text-align: center; /* Centraliza o conteúdo dentro do card */
+    
 }
 
-.descript span {
-    font-size: 1.3em;
+.descript .org-title {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 27, 59);
+    width: 320px;
+    height: 100px;
+    font-size: 1.2em;
     font-weight: 600;
     color: #fff;
+    border-radius: 20px;
+    
+}
+
+.descript .org-title span{
+    margin-left: 10px;
 }
 
 /* Título dentro do card */

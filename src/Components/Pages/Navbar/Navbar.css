@@ -38,6 +38,10 @@
     }
 }
 
+.logo{
+    margin-right: -20em;
+}
+
 .logo img {
     width: 5em;
     margin-top: -5px;
@@ -81,6 +85,7 @@
 .n-like span {
     font-weight: 900;
     font-size: 19px;
+    color: #fff;
 }
 
 .link-insta {
@@ -94,34 +99,93 @@
     width: 40px;
 }
 
-@media (max-width: 30em) {
+@media(max-width: 768px){
+
+    
     .nav-container{
         display: flex;
-        background-color: violet;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        overflow: hidden;
     }
 
-    .control{
+    .container .title{
+        margin-left: -350px;
+    }
+
+    .container .title h1{
+        z-index: 9999;
+        display: flex;
+        position: absolute;
+    }
+
+    .nav-container .hamburger {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 600px;
+      margin-left: 250px;
+      position: absolute;
+    }
+
+    .nav-container .hamburger div{
+        z-index: 9999;
+        padding: 3px 20px;
+        margin: 2px;
+        background-color: rgb(255, 255, 255);
+        transition: 0.9s;
+        cursor: pointer;
+    }
+
+    /*criando o evento do click*/
+
+    .nav-container .hamburger.open{
+        display: flex;
+    }
+
+    .nav-container .link-menu{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        overflow: hidden;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.849);
+        width: 50%;
+        height: 100vh;
+        z-index: 999;
+        margin-top: -10px;
+        margin-left: 580px;
+        transition: 0.9s;
+        
+    }
+
+    .nav-container .link-menu.open{
+        transform: translate(-190px);
+        transition: .9s;
+    }
+
+    .nav-container .link-menu a{
+        font-size: 2em;
+        margin: 5px;
+    }
+
+    .nav-container .hamburger.open div:nth-child(1){
+        transform: translateY(10px) rotate(45deg);
        
         
     }
 
-    .nav-container .logo{
+    .nav-container .hamburger.open div:nth-child(2){
+        opacity: 0;
+    }
+
+    .nav-container .hamburger.open div:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+       
+        
+    }
+
+    .nav-container .link-menu.open{
         display: flex;
-        margin-left: 20px;
     }
-
-    .control .hamburger{
-        display: flex;
-        background-color: yellowgreen;
-    }
-
-    .control .hamburger div{
-        width: 30px;
-        height: 10px;
-        padding: 2px;
-        background-color: #fff;
-    }
-
 }

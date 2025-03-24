@@ -5,8 +5,10 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    margin-top: 1px;
     border-top: 1px solid #353535;
     overflow: hidden;
+    background-color: #131212;
 }
 
 /* Imagem de fundo */
@@ -44,14 +46,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
-    margin-top: -650px;
+    margin-top: -700px;
 }
 
 .mestre h1 {
-    margin-left: -100px;
+    margin-right: -50px;
     margin-bottom: -250px;
-    font-size: 50px;
+    font-size: 20px;
+    color: rgb(54, 93, 151);
     border-bottom: 1px solid #353535;
     filter: blur(2px);
 }
@@ -59,11 +61,12 @@
 /* Estilo para os links no título */
 .title h2 {
     padding: 0 20px;
-    font-size: 23px;
+    font-size: 17px;
     margin-top: 50px;
     margin-left: 75px;
     cursor: pointer;
     transition: 1.5s;
+    color: rgb(54, 93, 151);
 }
 
 .title h2:hover {
