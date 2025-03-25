@@ -26,9 +26,10 @@ const Navbar = () => {
                 Freguesia, Rio de Janeiro, RJ</p>
             </div>
             <div className='control'>
-                <div className='logo'>
+                    <div className='logo'>
                         <img src={logo}/>
                     </div>
+                    
                     {/* criando  o menu hamburger*/}
                     <div className={`hamburger ${ isOpen ? "open" : " "}`} onClick={HandlerHumburger}>
                         <div></div>

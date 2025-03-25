@@ -5,7 +5,9 @@
     position: absolute;
     overflow: hidden;
     background: transparent;
+    flex-wrap: wrap;
     z-index: 99;
+    width: 100vw; /* Adicionado para garantir que o container ocupe toda a largura */
 }
 
 .control {
@@ -27,6 +29,7 @@
 .info-ender p {
     color: #fff;
     animation: anim-info 20s linear infinite;
+    white-space: nowrap; /* Impede a quebra de linha do texto */
 }
 
 @keyframes anim-info {
@@ -38,7 +41,7 @@
     }
 }
 
-.logo{
+.logo {
     margin-right: -20em;
 }
 
@@ -59,6 +62,7 @@
     color: #fff;
     font-size: 1.3em;
     font-weight: 600;
+    text-decoration: none; /* Adicionado para remover sublinhado padrão dos links */
 }
 
 .l-menu:hover {
@@ -99,93 +103,82 @@
     width: 40px;
 }
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+  
+    }
+
+    .control {
+        display: flex;
+        
+    }
+
+    .logo {
+        display: flex;
+       
+    }
+
+    .heart, .n-like, .link-insta{
+        display: none;
+    }
 
     
-    .nav-container{
+
+    .hamburger {
         display: flex;
         flex-direction: column;
         align-items: center;
-        overflow: hidden;
-    }
-
-    .container .title{
-        margin-left: -350px;
-    }
-
-    .container .title h1{
-        z-index: 9999;
-        display: flex;
-        position: absolute;
-    }
-
-    .nav-container .hamburger {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 600px;
-      margin-left: 250px;
-      position: absolute;
-    }
-
-    .nav-container .hamburger div{
-        z-index: 9999;
-        padding: 3px 20px;
-        margin: 2px;
-        background-color: rgb(255, 255, 255);
-        transition: 0.9s;
-        cursor: pointer;
-    }
-
-    /*criando o evento do click*/
-
-    .nav-container .hamburger.open{
-        display: flex;
-    }
-
-    .nav-container .link-menu{
-        display: flex;
-        position: absolute;
-        align-items: center;
-        overflow: hidden;
         justify-content: center;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.849);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 9999999;
+        cursor: pointer;
+        
+    }
+
+    .hamburger div {
+        background-color: #fff;
+        width: 3.5em;
+        height: 6px;
+        margin: 3px;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .menu {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.767);
+        position: absolute;
+        transition: transform 5s ease, opacity 0.5s ease;
+        right: 0;
         width: 50%;
-        height: 100vh;
-        z-index: 999;
-        margin-top: -10px;
-        margin-left: 580px;
-        transition: 0.9s;
-        
+        top: 0;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999999;
     }
 
-    .nav-container .link-menu.open{
-        transform: translate(-190px);
-        transition: .9s;
+    
+
+    .menu.open {
+        display: flex;
     }
 
-    .nav-container .link-menu a{
-        font-size: 2em;
-        margin: 5px;
+    .hamburger.open div:nth-child(1) {
+        transform: rotate(45deg) translateY(17px);
     }
 
-    .nav-container .hamburger.open div:nth-child(1){
-        transform: translateY(10px) rotate(45deg);
-       
-        
-    }
-
-    .nav-container .hamburger.open div:nth-child(2){
+    .hamburger.open div:nth-child(2) {
+        transform: scale(2);
         opacity: 0;
     }
 
-    .nav-container .hamburger.open div:nth-child(3){
-        transform: translateY(-10px) rotate(-45deg);
-       
-        
-    }
-
-    .nav-container .link-menu.open{
-        display: flex;
+    .hamburger.open div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-15px);
     }
 }
+
