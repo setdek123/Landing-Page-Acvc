@@ -22,12 +22,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-top: 130px;
     border-radius: 20px;
     overflow: hidden;
     flex-wrap: wrap; /* Permite que os cards se ajustem em múltiplas linhas se necessário */
-    justify-content: space-around; /* Distribui os cards de forma eficiente */
     width: 100%;
 }
 
@@ -37,13 +36,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    max-width: 350px; /* Limita o tamanho máximo do card */
+    max-height: 400px;
+    width: 400px; /* Limita o tamanho máximo do card */
     background-color: rgb(10, 10, 29);
     border-radius: 20px;
     box-shadow: 0px 10px 17px #000000;
     margin-bottom: 20px; /* Adiciona um espaçamento entre os cards */
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 /* Imagem dos cards */
@@ -76,9 +76,11 @@
 }
 
 .descript span {
+    display: flex;
     font-size: 1.3em;
     font-weight: 600;
     color: #fff;
+    
 }
 
 /* Título dentro do card */
